@@ -12,7 +12,7 @@ Below a possible initial state is shown on the left and the goal state is shown 
 
 ## 2: SMT2 encoding of N-Queens Problem
 
-[SMT2 (Satisfiability Modulo Theories Library 2) Standard](https://smtlib.cs.uiowa.edu/papers/smt-lib-reference-v2.6-r2021-05-12.pdf) In this implementation we became especially interested in SMT-Python interfacing, where a system might the run fully closed, if z3 executed locally, say, generation -> smt evaluation -> (Python) visualization or some other processing of an SMT result. See diagram of the implementation solution below as well.
+[SMT2 (Satisfiability Modulo Theories Library 2) Standard](https://smtlib.cs.uiowa.edu/papers/smt-lib-reference-v2.6-r2021-05-12.pdf) In this implementation we became especially interested in SMT-Python interfacing, where a system might run fully closed, if z3 executed locally, say, then SMT-code generation -> SMT-evaluation locally, piping to a new (Python) program -> (Python) visualization or some other processing of an SMT-logical result that couldn't be done in Python alone. See diagram of the implementation solution below as well, testing these capabilities.
 
 Task: Solve the N-Queens problem, a classical mathematical problem of placing N queens on an N ×N chessboard such that no two queens are mutually attacking, i.e., no two queens share the same row, column or a diagonal. That is, a solution requires that no two queens share the same row, column, or diagonal. 
 
