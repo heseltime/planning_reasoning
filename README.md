@@ -6,7 +6,7 @@ For the AI Masters Planning and Reasoning course at JKU.
 
 Task: solve sliding puzzle of size 3 × 3. The field contains eight stones numbered with 1 − 8. One field is empty. The stones on the fields left, right, top, or bottom of the empty field can be moved on the empty field. The goal is to sort the stones in ascending order such that the empty field is in the lower right corner. 
 
-Below an possible initial state is shown on the left and the goal state is shown on the right.
+Below a possible initial state is shown on the left and the goal state is shown on the right.
 
 <img width="251" alt="image" src="https://github.com/heseltime/planning_reasoning/assets/66922223/e0938964-4f3e-4f46-ad61-9801047c9c4c">
 
@@ -28,4 +28,12 @@ Approach: We start with the 4 by 4 version of the problem, see 4queens.smt2. Fro
 
 #### 4x4 (initial hand-coded test, see 4queensTest.smt2):
 
+
+
 #### 8x8 (generated, see 8queensGenerated.smt2):
+
+
+### Diagram
+
+<img width="682" alt="image" src="https://github.com/heseltime/planning_reasoning/assets/66922223/9831652c-bbc6-4ee9-ba04-7eadfdfcdb99">
+
