@@ -30,7 +30,7 @@ Approach: We start with the 4 by 4 version of the problem, see 4queens.smt2. Fro
 
 <img width="382" alt="image" src="https://github.com/heseltime/planning_reasoning/assets/66922223/37ca10b8-2b88-4f8b-b186-ff3bcc796d7a">
 
-Note: This is actually the example solution from the specification.
+Note: This is actually the example solution from the specification, depicted above.
 
 #### 8x8 (generated, see 8queensGenerated.smt2):
 
