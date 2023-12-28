@@ -14,8 +14,12 @@ Below an possible initial state is shown on the left and the goal state is shown
 
 [SMT2 Standard](https://smtlib.cs.uiowa.edu/papers/smt-lib-reference-v2.6-r2021-05-12.pdf)
 
-The N-Queens problem is a classical mathematical problem of placing N queens on an N ×N chessboard such that no two queens are mutually attacking, i.e., no two queens share the same row, column or a diagonal. That is, a solution requires that no two queens share the same row, column, or diagonal. 
+Task: Solve the N-Queens problem, a classical mathematical problem of placing N queens on an N ×N chessboard such that no two queens are mutually attacking, i.e., no two queens share the same row, column or a diagonal. That is, a solution requires that no two queens share the same row, column, or diagonal. 
 
 The below figure is an example solution for the 4-Queens problem.
 
 <img width="76" alt="image" src="https://github.com/heseltime/planning_reasoning/assets/66922223/221ba85a-35f4-4b2d-8b01-0669de6c1986">
+
+Assumption: N queens on a N by N chessboard.
+
+Approach: We start with the 4 by 4 version of the problem, see 4queens.smt2. From there we generalize the problem.
