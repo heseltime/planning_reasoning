@@ -22,4 +22,10 @@ The below figure is an example solution for the 4-Queens problem.
 
 Assumption: N queens on a N by N chessboard.
 
-Approach: We start with the 4 by 4 version of the problem, see 4queens.smt2. From there we generalize the problem.
+Approach: We start with the 4 by 4 version of the problem, see 4queens.smt2. From there we generalize the problem (see also NqueensPseudo.smt2). Instead or rote implementation of the 8 by 8 version we try a SMT2-code-generation script in Python, see generate.py - this seems to work when feeding to a [z3 execution web interface](https://jfmc.github.io/z3-play/). The outputs from the interface are contained in and visualized by visualizeXqueensOutput.py with MatPlotLib, reproduced below.
+
+### Results
+
+#### 4x4 (initial hand-coded test, see 4queensTest.smt2):
+
+#### 8x8 (generated, see 8queensGenerated.smt2):
