@@ -1,7 +1,10 @@
 import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 import numpy as np
 
 # 2023-12, Planning and Reasoning Project
+# Sarah and Jack
+
 # quick visualization of the N-Queens problem,
 # based on the output of the Z3 solver for a given n
 
@@ -40,20 +43,29 @@ for line in smt2_output.splitlines():
         position = parts[1]
         value = parts[-1][:-1] # trim the trailing bracket
         if value == "true":
+            #print(position)
             x, y = int(position[1]), int(position[3])
             board[y, x] = 1
 
-# create a chess board visualization
+
 plt.figure(figsize=(n + 2, n + 2))
-plt.imshow(board, cmap='gray_r')
 plt.xticks(range(n))
 plt.yticks(range(n))
-plt.title('4x4 N-Queens Problem')
+plt.title(str(n) + 'x' + str(n) + ' N-Queens Problem')
 
-# Mark the queens
+
+# checkered pattern for the board
+for y in range(n):
+    for x in range(n):
+        if (x + y) % 2 == 0:
+            plt.fill_between([x, x + 1], [y, y], [y + 1, y + 1], color='gray', alpha=0.5)
+
+# Place crown images instead of 'Q'
 for y in range(n):
     for x in range(n):
         if board[y, x] == 1:
-            plt.text(x, y, 'Q', fontsize=10, ha='center', va='center', color='white')
+            plt.fill_between([x, x + 1], [y, y], [y + 1, y + 1], color='black', alpha=1)
+            #plt.imshow(mpimg.imread('crown64.jpg'), extent=[x, x + 1, y, y + 1])
+            plt.text(x + 0.5, y + 0.5, 'Q', fontsize=12, ha='center', va='center', color='white')
 
 plt.show()

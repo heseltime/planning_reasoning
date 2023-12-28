@@ -1,5 +1,5 @@
 ; 2023-12, Planning and Reasoning Project
-; Sapce and Jack
+; Sarah and Jack
 ;
 ; N-queens problem high-level/pseudo, to be implemented in 4x4 and 8x8
 

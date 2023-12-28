@@ -1,5 +1,5 @@
 ; 2023-12, Planning and Reasoning Project
-; Sapce and Jack
+; Sarah and Jack
 ;
 ; N-queens problem for the 4x4 case to start, see comments above code blocks for approach (SMT2)
 ;
