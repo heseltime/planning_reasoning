@@ -12,7 +12,7 @@ Below an possible initial state is shown on the left and the goal state is shown
 
 ## 2: SMT2 encoding of N-Queens Problem
 
-(SMT2 Standard)[https://smtlib.cs.uiowa.edu/papers/smt-lib-reference-v2.6-r2021-05-12.pdf]
+[SMT2 Standard](https://smtlib.cs.uiowa.edu/papers/smt-lib-reference-v2.6-r2021-05-12.pdf)
 
 The N-Queens problem is a classical mathematical problem of placing N queens on an N ×N chessboard such that no two queens are mutually attacking, i.e., no two queens share the same row, column or a diagonal. That is, a solution requires that no two queens share the same row, column, or diagonal. 
 
