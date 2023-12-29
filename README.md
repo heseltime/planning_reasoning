@@ -38,9 +38,10 @@ Note: This is actually the example solution from the specification, depicted abo
 
 **This also represents to the Project solution to Problem 1, together with the SMT2-generator script, generate.py, all in folder 2_nQueens of the repo.**
 
-### Diagram
+### Diagram Overview of Project 2
 
-<img width="682" alt="image" src="https://github.com/heseltime/planning_reasoning/assets/66922223/9831652c-bbc6-4ee9-ba04-7eadfdfcdb99">
+<img width="692" alt="image" src="https://github.com/heseltime/planning_reasoning/assets/66922223/1bd792d6-5e80-48b5-95f3-854d5f21dfcd">
+
 
 ### Further Note
 
