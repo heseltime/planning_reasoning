@@ -36,6 +36,8 @@ Note: This is actually the example solution from the specification, depicted abo
 
 <img width="603" alt="image" src="https://github.com/heseltime/planning_reasoning/assets/66922223/cee076a1-7329-466e-b167-97b79775c65a">
 
+**This also represents to the Project solution to Problem 1, together with the SMT2-generator script, generate.py, all in folder 1_nQueens of the repo.**
+
 ### Diagram
 
 <img width="682" alt="image" src="https://github.com/heseltime/planning_reasoning/assets/66922223/9831652c-bbc6-4ee9-ba04-7eadfdfcdb99">
