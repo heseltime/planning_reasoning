@@ -42,7 +42,6 @@ Note: This is actually the example solution from the specification, depicted abo
 
 ### Further Note
 
-Since the solution for the 8x8 problem is generically generated, it can be applied to even larger scale versions of the N-queens problem, e.g. 16-, 32- and 64-queens:
-
+Since the solution for the 8x8 problem is generically generated, it can be applied to even larger scale versions of the N-queens problem, e.g. 16- and 32-queens, although the 32-queens problem's SMT encoding did not execute on the reference z3 tool anymore ([z3 Playground](https://jfmc.github.io/z3-play/)). 
 
 
