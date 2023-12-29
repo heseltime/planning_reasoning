@@ -56,8 +56,8 @@
 ; continued! But rotate 90 degrees
 (assert (not (or (and x3y1 x2y2) (and x3y1 x1y3) (and x2y2 x1y3)))) ; top right-ish
 (assert (not (or (and x2y2 x3y1) (and x1y3 x3y1) (and x1y3 x2y2)))) 
-(assert (not (or (and x0y1 x1y2) (and x1y2 x2y3) (and x0y1 x2y3)))) ; bottom left-ish
-(assert (not (or (and x1y2 x0y1) (and x2y3 x1y2) (and x2y3 x0y1))))
+(assert (not (or (and x0y2 x1y1) (and x1y1 x2y0) (and x0y2 x2y0)))) ; bottom left-ish
+(assert (not (or (and x1y1 x0y2) (and x2y0 x1y1) (and x2y0 x0y2))))
 
 ; two-field diags
 (assert (not (or (and x0y2 x1y3)))) ; top left

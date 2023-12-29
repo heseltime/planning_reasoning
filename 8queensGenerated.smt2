@@ -1,4 +1,11 @@
-;; Generate the definitions of the variables
+; 2023-12, Planning and Reasoning Project - Generated Code! See generate.py 
+; Sarah and Jack
+;
+; N-queens problem for the 8 x 8 case to start, see comments above code blocks for approach (SMT2)
+;
+; see https://jfmc.github.io/z3-play/ for a current (2023-12) z3 web interface to execute
+
+; playing field
 (declare-const x0y0 Bool)
 (declare-const x0y1 Bool)
 (declare-const x0y2 Bool)
@@ -63,8 +70,8 @@
 (declare-const x7y5 Bool)
 (declare-const x7y6 Bool)
 (declare-const x7y7 Bool)
-;;Generate the "one queen by line" clauses
 
+; 8 queens on the field, one per row
 (assert (or x0y0  x0y1  x0y2  x0y3  x0y4  x0y5  x0y6 x0y7))
 (assert (or x1y0  x1y1  x1y2  x1y3  x1y4  x1y5  x1y6 x1y7))
 (assert (or x2y0  x2y1  x2y2  x2y3  x2y4  x2y5  x2y6 x2y7))
@@ -74,8 +81,7 @@
 (assert (or x6y0  x6y1  x6y2  x6y3  x6y4  x6y5  x6y6 x6y7))
 (assert (or x7y0  x7y1  x7y2  x7y3  x7y4  x7y5  x7y6 x7y7))
 
-;;Generate the "only one queen by line" clauses
-
+; 2 queens should never be on the same line ...
 (assert (not (or(and x0y1 x0y0)(and x0y2 x0y0)(and x0y2 x0y1)(and x0y3 x0y0)(and x0y3 x0y1)(and x0y3 x0y2)(and x0y4 x0y0)(and x0y4 x0y1)(and x0y4 x0y2)(and x0y4 x0y3)(and x0y5 x0y0)(and x0y5 x0y1)(and x0y5 x0y2)(and x0y5 x0y3)(and x0y5 x0y4)(and x0y6 x0y0)(and x0y6 x0y1)(and x0y6 x0y2)(and x0y6 x0y3)(and x0y6 x0y4)(and x0y6 x0y5)(and x0y7 x0y0)(and x0y7 x0y1)(and x0y7 x0y2)(and x0y7 x0y3)(and x0y7 x0y4)(and x0y7 x0y5)(and x0y7 x0y6))))
 (assert (not (or(and x1y1 x1y0)(and x1y2 x1y0)(and x1y2 x1y1)(and x1y3 x1y0)(and x1y3 x1y1)(and x1y3 x1y2)(and x1y4 x1y0)(and x1y4 x1y1)(and x1y4 x1y2)(and x1y4 x1y3)(and x1y5 x1y0)(and x1y5 x1y1)(and x1y5 x1y2)(and x1y5 x1y3)(and x1y5 x1y4)(and x1y6 x1y0)(and x1y6 x1y1)(and x1y6 x1y2)(and x1y6 x1y3)(and x1y6 x1y4)(and x1y6 x1y5)(and x1y7 x1y0)(and x1y7 x1y1)(and x1y7 x1y2)(and x1y7 x1y3)(and x1y7 x1y4)(and x1y7 x1y5)(and x1y7 x1y6))))
 (assert (not (or(and x2y1 x2y0)(and x2y2 x2y0)(and x2y2 x2y1)(and x2y3 x2y0)(and x2y3 x2y1)(and x2y3 x2y2)(and x2y4 x2y0)(and x2y4 x2y1)(and x2y4 x2y2)(and x2y4 x2y3)(and x2y5 x2y0)(and x2y5 x2y1)(and x2y5 x2y2)(and x2y5 x2y3)(and x2y5 x2y4)(and x2y6 x2y0)(and x2y6 x2y1)(and x2y6 x2y2)(and x2y6 x2y3)(and x2y6 x2y4)(and x2y6 x2y5)(and x2y7 x2y0)(and x2y7 x2y1)(and x2y7 x2y2)(and x2y7 x2y3)(and x2y7 x2y4)(and x2y7 x2y5)(and x2y7 x2y6))))
@@ -85,7 +91,7 @@
 (assert (not (or(and x6y1 x6y0)(and x6y2 x6y0)(and x6y2 x6y1)(and x6y3 x6y0)(and x6y3 x6y1)(and x6y3 x6y2)(and x6y4 x6y0)(and x6y4 x6y1)(and x6y4 x6y2)(and x6y4 x6y3)(and x6y5 x6y0)(and x6y5 x6y1)(and x6y5 x6y2)(and x6y5 x6y3)(and x6y5 x6y4)(and x6y6 x6y0)(and x6y6 x6y1)(and x6y6 x6y2)(and x6y6 x6y3)(and x6y6 x6y4)(and x6y6 x6y5)(and x6y7 x6y0)(and x6y7 x6y1)(and x6y7 x6y2)(and x6y7 x6y3)(and x6y7 x6y4)(and x6y7 x6y5)(and x6y7 x6y6))))
 (assert (not (or(and x7y1 x7y0)(and x7y2 x7y0)(and x7y2 x7y1)(and x7y3 x7y0)(and x7y3 x7y1)(and x7y3 x7y2)(and x7y4 x7y0)(and x7y4 x7y1)(and x7y4 x7y2)(and x7y4 x7y3)(and x7y5 x7y0)(and x7y5 x7y1)(and x7y5 x7y2)(and x7y5 x7y3)(and x7y5 x7y4)(and x7y6 x7y0)(and x7y6 x7y1)(and x7y6 x7y2)(and x7y6 x7y3)(and x7y6 x7y4)(and x7y6 x7y5)(and x7y7 x7y0)(and x7y7 x7y1)(and x7y7 x7y2)(and x7y7 x7y3)(and x7y7 x7y4)(and x7y7 x7y5)(and x7y7 x7y6))))
 
-;;Generate the "only one queen by column" clauses
+; ... or column ...
 (assert (not (or(and x1y0 x0y0)(and x2y0 x0y0)(and x2y0 x1y0)(and x3y0 x0y0)(and x3y0 x1y0)(and x3y0 x2y0)(and x4y0 x0y0)(and x4y0 x1y0)(and x4y0 x2y0)(and x4y0 x3y0)(and x5y0 x0y0)(and x5y0 x1y0)(and x5y0 x2y0)(and x5y0 x3y0)(and x5y0 x4y0)(and x6y0 x0y0)(and x6y0 x1y0)(and x6y0 x2y0)(and x6y0 x3y0)(and x6y0 x4y0)(and x6y0 x5y0)(and x7y0 x0y0)(and x7y0 x1y0)(and x7y0 x2y0)(and x7y0 x3y0)(and x7y0 x4y0)(and x7y0 x5y0)(and x7y0 x6y0))))
 (assert (not (or(and x1y1 x0y1)(and x2y1 x0y1)(and x2y1 x1y1)(and x3y1 x0y1)(and x3y1 x1y1)(and x3y1 x2y1)(and x4y1 x0y1)(and x4y1 x1y1)(and x4y1 x2y1)(and x4y1 x3y1)(and x5y1 x0y1)(and x5y1 x1y1)(and x5y1 x2y1)(and x5y1 x3y1)(and x5y1 x4y1)(and x6y1 x0y1)(and x6y1 x1y1)(and x6y1 x2y1)(and x6y1 x3y1)(and x6y1 x4y1)(and x6y1 x5y1)(and x7y1 x0y1)(and x7y1 x1y1)(and x7y1 x2y1)(and x7y1 x3y1)(and x7y1 x4y1)(and x7y1 x5y1)(and x7y1 x6y1))))
 (assert (not (or(and x1y2 x0y2)(and x2y2 x0y2)(and x2y2 x1y2)(and x3y2 x0y2)(and x3y2 x1y2)(and x3y2 x2y2)(and x4y2 x0y2)(and x4y2 x1y2)(and x4y2 x2y2)(and x4y2 x3y2)(and x5y2 x0y2)(and x5y2 x1y2)(and x5y2 x2y2)(and x5y2 x3y2)(and x5y2 x4y2)(and x6y2 x0y2)(and x6y2 x1y2)(and x6y2 x2y2)(and x6y2 x3y2)(and x6y2 x4y2)(and x6y2 x5y2)(and x7y2 x0y2)(and x7y2 x1y2)(and x7y2 x2y2)(and x7y2 x3y2)(and x7y2 x4y2)(and x7y2 x5y2)(and x7y2 x6y2))))
@@ -95,7 +101,8 @@
 (assert (not (or(and x1y6 x0y6)(and x2y6 x0y6)(and x2y6 x1y6)(and x3y6 x0y6)(and x3y6 x1y6)(and x3y6 x2y6)(and x4y6 x0y6)(and x4y6 x1y6)(and x4y6 x2y6)(and x4y6 x3y6)(and x5y6 x0y6)(and x5y6 x1y6)(and x5y6 x2y6)(and x5y6 x3y6)(and x5y6 x4y6)(and x6y6 x0y6)(and x6y6 x1y6)(and x6y6 x2y6)(and x6y6 x3y6)(and x6y6 x4y6)(and x6y6 x5y6)(and x7y6 x0y6)(and x7y6 x1y6)(and x7y6 x2y6)(and x7y6 x3y6)(and x7y6 x4y6)(and x7y6 x5y6)(and x7y6 x6y6))))
 (assert (not (or(and x1y7 x0y7)(and x2y7 x0y7)(and x2y7 x1y7)(and x3y7 x0y7)(and x3y7 x1y7)(and x3y7 x2y7)(and x4y7 x0y7)(and x4y7 x1y7)(and x4y7 x2y7)(and x4y7 x3y7)(and x5y7 x0y7)(and x5y7 x1y7)(and x5y7 x2y7)(and x5y7 x3y7)(and x5y7 x4y7)(and x6y7 x0y7)(and x6y7 x1y7)(and x6y7 x2y7)(and x6y7 x3y7)(and x6y7 x4y7)(and x6y7 x5y7)(and x7y7 x0y7)(and x7y7 x1y7)(and x7y7 x2y7)(and x7y7 x3y7)(and x7y7 x4y7)(and x7y7 x5y7)(and x7y7 x6y7))))
 
-;;Generate the "only one queen by diagonal" clauses
+; ... or diagonal: both directions! We start with the main diagonals.
+; Top left from the main diagonal, including it:
 (assert (not (or (and x0y0 x1y1) (and x0y0 x2y2) (and x0y0 x3y3) (and x0y0 x4y4) (and x0y0 x5y5) (and x0y0 x6y6) (and x0y0 x7y7) (and x1y1 x2y2) (and x1y1 x3y3) (and x1y1 x4y4) (and x1y1 x5y5) (and x1y1 x6y6) (and x1y1 x7y7) (and x2y2 x3y3) (and x2y2 x4y4) (and x2y2 x5y5) (and x2y2 x6y6) (and x2y2 x7y7) (and x3y3 x4y4) (and x3y3 x5y5) (and x3y3 x6y6) (and x3y3 x7y7) (and x4y4 x5y5) (and x4y4 x6y6) (and x4y4 x7y7) (and x5y5 x6y6) (and x5y5 x7y7) (and x6y6 x7y7))))
 (assert (not (or (and x0y1 x1y2) (and x0y1 x2y3) (and x0y1 x3y4) (and x0y1 x4y5) (and x0y1 x5y6) (and x0y1 x6y7) (and x1y2 x2y3) (and x1y2 x3y4) (and x1y2 x4y5) (and x1y2 x5y6) (and x1y2 x6y7) (and x2y3 x3y4) (and x2y3 x4y5) (and x2y3 x5y6) (and x2y3 x6y7) (and x3y4 x4y5) (and x3y4 x5y6) (and x3y4 x6y7) (and x4y5 x5y6) (and x4y5 x6y7) (and x5y6 x6y7))))
 (assert (not (or (and x0y2 x1y3) (and x0y2 x2y4) (and x0y2 x3y5) (and x0y2 x4y6) (and x0y2 x5y7) (and x1y3 x2y4) (and x1y3 x3y5) (and x1y3 x4y6) (and x1y3 x5y7) (and x2y4 x3y5) (and x2y4 x4y6) (and x2y4 x5y7) (and x3y5 x4y6) (and x3y5 x5y7) (and x4y6 x5y7))))
@@ -103,12 +110,8 @@
 (assert (not (or (and x0y4 x1y5) (and x0y4 x2y6) (and x0y4 x3y7) (and x1y5 x2y6) (and x1y5 x3y7) (and x2y6 x3y7))))
 (assert (not (or (and x0y5 x1y6) (and x0y5 x2y7) (and x1y6 x2y7))))
 (assert (not (or (and x0y6 x1y7))))
-(assert (not (or (and x1y0 x2y1) (and x1y0 x3y2) (and x1y0 x4y3) (and x1y0 x5y4) (and x1y0 x6y5) (and x1y0 x7y6) (and x2y1 x3y2) (and x2y1 x4y3) (and x2y1 x5y4) (and x2y1 x6y5) (and x2y1 x7y6) (and x3y2 x4y3) (and x3y2 x5y4) (and x3y2 x6y5) (and x3y2 x7y6) (and x4y3 x5y4) (and x4y3 x6y5) (and x4y3 x7y6) (and x5y4 x6y5) (and x5y4 x7y6) (and x6y5 x7y6))))
-(assert (not (or (and x2y0 x3y1) (and x2y0 x4y2) (and x2y0 x5y3) (and x2y0 x6y4) (and x2y0 x7y5) (and x3y1 x4y2) (and x3y1 x5y3) (and x3y1 x6y4) (and x3y1 x7y5) (and x4y2 x5y3) (and x4y2 x6y4) (and x4y2 x7y5) (and x5y3 x6y4) (and x5y3 x7y5) (and x6y4 x7y5))))
-(assert (not (or (and x3y0 x4y1) (and x3y0 x5y2) (and x3y0 x6y3) (and x3y0 x7y4) (and x4y1 x5y2) (and x4y1 x6y3) (and x4y1 x7y4) (and x5y2 x6y3) (and x5y2 x7y4) (and x6y3 x7y4))))
-(assert (not (or (and x4y0 x5y1) (and x4y0 x6y2) (and x4y0 x7y3) (and x5y1 x6y2) (and x5y1 x7y3) (and x6y2 x7y3))))
-(assert (not (or (and x5y0 x6y1) (and x5y0 x7y2) (and x6y1 x7y2))))
-(assert (not (or (and x6y0 x7y1))))
+
+; the other direction, but same orientation of the diagonal:
 (assert (not (or (and x1y1 x0y0) (and x2y2 x0y0) (and x3y3 x0y0) (and x4y4 x0y0) (and x5y5 x0y0) (and x6y6 x0y0) (and x7y7 x0y0) (and x2y2 x1y1) (and x3y3 x1y1) (and x4y4 x1y1) (and x5y5 x1y1) (and x6y6 x1y1) (and x7y7 x1y1) (and x3y3 x2y2) (and x4y4 x2y2) (and x5y5 x2y2) (and x6y6 x2y2) (and x7y7 x2y2) (and x4y4 x3y3) (and x5y5 x3y3) (and x6y6 x3y3) (and x7y7 x3y3) (and x5y5 x4y4) (and x6y6 x4y4) (and x7y7 x4y4) (and x6y6 x5y5) (and x7y7 x5y5) (and x7y7 x6y6))))
 (assert (not (or (and x1y2 x0y1) (and x2y3 x0y1) (and x3y4 x0y1) (and x4y5 x0y1) (and x5y6 x0y1) (and x6y7 x0y1) (and x2y3 x1y2) (and x3y4 x1y2) (and x4y5 x1y2) (and x5y6 x1y2) (and x6y7 x1y2) (and x3y4 x2y3) (and x4y5 x2y3) (and x5y6 x2y3) (and x6y7 x2y3) (and x4y5 x3y4) (and x5y6 x3y4) (and x6y7 x3y4) (and x5y6 x4y5) (and x6y7 x4y5) (and x6y7 x5y6))))
 (assert (not (or (and x1y3 x0y2) (and x2y4 x0y2) (and x3y5 x0y2) (and x4y6 x0y2) (and x5y7 x0y2) (and x2y4 x1y3) (and x3y5 x1y3) (and x4y6 x1y3) (and x5y7 x1y3) (and x3y5 x2y4) (and x4y6 x2y4) (and x5y7 x2y4) (and x4y6 x3y5) (and x5y7 x3y5) (and x5y7 x4y6))))
@@ -116,6 +119,16 @@
 (assert (not (or (and x1y5 x0y4) (and x2y6 x0y4) (and x3y7 x0y4) (and x2y6 x1y5) (and x3y7 x1y5) (and x3y7 x2y6))))
 (assert (not (or (and x1y6 x0y5) (and x2y7 x0y5) (and x2y7 x1y6))))
 (assert (not (or (and x1y7 x0y6))))
+
+; Bottom right from the main diagonal, not including:
+(assert (not (or (and x1y0 x2y1) (and x1y0 x3y2) (and x1y0 x4y3) (and x1y0 x5y4) (and x1y0 x6y5) (and x1y0 x7y6) (and x2y1 x3y2) (and x2y1 x4y3) (and x2y1 x5y4) (and x2y1 x6y5) (and x2y1 x7y6) (and x3y2 x4y3) (and x3y2 x5y4) (and x3y2 x6y5) (and x3y2 x7y6) (and x4y3 x5y4) (and x4y3 x6y5) (and x4y3 x7y6) (and x5y4 x6y5) (and x5y4 x7y6) (and x6y5 x7y6))))
+(assert (not (or (and x2y0 x3y1) (and x2y0 x4y2) (and x2y0 x5y3) (and x2y0 x6y4) (and x2y0 x7y5) (and x3y1 x4y2) (and x3y1 x5y3) (and x3y1 x6y4) (and x3y1 x7y5) (and x4y2 x5y3) (and x4y2 x6y4) (and x4y2 x7y5) (and x5y3 x6y4) (and x5y3 x7y5) (and x6y4 x7y5))))
+(assert (not (or (and x3y0 x4y1) (and x3y0 x5y2) (and x3y0 x6y3) (and x3y0 x7y4) (and x4y1 x5y2) (and x4y1 x6y3) (and x4y1 x7y4) (and x5y2 x6y3) (and x5y2 x7y4) (and x6y3 x7y4))))
+(assert (not (or (and x4y0 x5y1) (and x4y0 x6y2) (and x4y0 x7y3) (and x5y1 x6y2) (and x5y1 x7y3) (and x6y2 x7y3))))
+(assert (not (or (and x5y0 x6y1) (and x5y0 x7y2) (and x6y1 x7y2))))
+(assert (not (or (and x6y0 x7y1))))
+
+; the other direction, but same orientation of the diagonal:
 (assert (not (or (and x2y1 x1y0) (and x3y2 x1y0) (and x4y3 x1y0) (and x5y4 x1y0) (and x6y5 x1y0) (and x7y6 x1y0) (and x3y2 x2y1) (and x4y3 x2y1) (and x5y4 x2y1) (and x6y5 x2y1) (and x7y6 x2y1) (and x4y3 x3y2) (and x5y4 x3y2) (and x6y5 x3y2) (and x7y6 x3y2) (and x5y4 x4y3) (and x6y5 x4y3) (and x7y6 x4y3) (and x6y5 x5y4) (and x7y6 x5y4) (and x7y6 x6y5))))
 (assert (not (or (and x3y1 x2y0) (and x4y2 x2y0) (and x5y3 x2y0) (and x6y4 x2y0) (and x7y5 x2y0) (and x4y2 x3y1) (and x5y3 x3y1) (and x6y4 x3y1) (and x7y5 x3y1) (and x5y3 x4y2) (and x6y4 x4y2) (and x7y5 x4y2) (and x6y4 x5y3) (and x7y5 x5y3) (and x7y5 x6y4))))
 (assert (not (or (and x4y1 x3y0) (and x5y2 x3y0) (and x6y3 x3y0) (and x7y4 x3y0) (and x5y2 x4y1) (and x6y3 x4y1) (and x7y4 x4y1) (and x6y3 x5y2) (and x7y4 x5y2) (and x7y4 x6y3))))
@@ -123,6 +136,41 @@
 (assert (not (or (and x6y1 x5y0) (and x7y2 x5y0) (and x7y2 x6y1))))
 (assert (not (or (and x7y1 x6y0))))
 
-;; Check if the generate model is satisfiable and output a model.
+; Now the 90 degree flip for the new orientation!
+; Starting with the upper right half, from and including the main diagonal:
+(assert (not (or (and x7y0 x6y1) (and x7y0 x5y2) (and x7y0 x4y3) (and x7y0 x3y4) (and x7y0 x2y5) (and x7y0 x1y6) (and x7y0 x0y7) (and x6y1 x5y2) (and x6y1 x4y3) (and x6y1 x3y4) (and x6y1 x2y5) (and x6y1 x1y6) (and x6y1 x0y7) (and x5y2 x4y3) (and x5y2 x3y4) (and x5y2 x2y5) (and x5y2 x1y6) (and x5y2 x0y7) (and x4y3 x3y4) (and x4y3 x2y5) (and x4y3 x1y6) (and x4y3 x0y7) (and x3y4 x2y5) (and x3y4 x1y6) (and x3y4 x0y7) (and x2y5 x1y6) (and x2y5 x0y7) (and x1y6 x0y7))))
+(assert (not (or (and x7y1 x6y2) (and x7y1 x5y3) (and x7y1 x4y4) (and x7y1 x3y5) (and x7y1 x2y6) (and x7y1 x1y7) (and x6y2 x5y3) (and x6y2 x4y4) (and x6y2 x3y5) (and x6y2 x2y6) (and x6y2 x1y7) (and x5y3 x4y4) (and x5y3 x3y5) (and x5y3 x2y6) (and x5y3 x1y7) (and x4y4 x3y5) (and x4y4 x2y6) (and x4y4 x1y7) (and x3y5 x2y6) (and x3y5 x1y7) (and x2y6 x1y7))))
+(assert (not (or (and x7y2 x6y3) (and x7y2 x5y4) (and x7y2 x4y5) (and x7y2 x3y6) (and x7y2 x2y7) (and x6y3 x5y4) (and x6y3 x4y5) (and x6y3 x3y6) (and x6y3 x2y7) (and x5y4 x4y5) (and x5y4 x3y6) (and x5y4 x2y7) (and x4y5 x3y6) (and x4y5 x2y7) (and x3y6 x2y7))))
+(assert (not (or (and x7y3 x6y4) (and x7y3 x5y5) (and x7y3 x4y6) (and x7y3 x3y7) (and x6y4 x5y5) (and x6y4 x4y6) (and x6y4 x3y7) (and x5y5 x4y6) (and x5y5 x3y7) (and x4y6 x3y7))))
+(assert (not (or (and x7y4 x6y5) (and x7y4 x5y6) (and x7y4 x4y7) (and x6y5 x5y6) (and x6y5 x4y7) (and x5y6 x4y7))))
+(assert (not (or (and x7y5 x6y6) (and x7y5 x5y7) (and x6y6 x5y7))))
+(assert (not (or (and x7y6 x6y7))))
+
+; the other direction, but same orientation of the diagonal:
+(assert (not (or (and x6y1 x7y0) (and x5y2 x7y0) (and x4y3 x7y0) (and x3y4 x7y0) (and x2y5 x7y0) (and x1y6 x7y0) (and x0y7 x7y0) (and x5y2 x6y1) (and x4y3 x6y1) (and x3y4 x6y1) (and x2y5 x6y1) (and x1y6 x6y1) (and x0y7 x6y1) (and x4y3 x5y2) (and x3y4 x5y2) (and x2y5 x5y2) (and x1y6 x5y2) (and x0y7 x5y2) (and x3y4 x4y3) (and x2y5 x4y3) (and x1y6 x4y3) (and x0y7 x4y3) (and x2y5 x3y4) (and x1y6 x3y4) (and x0y7 x3y4) (and x1y6 x2y5) (and x0y7 x2y5) (and x0y7 x1y6))))
+(assert (not (or (and x6y2 x7y1) (and x5y3 x7y1) (and x4y4 x7y1) (and x3y5 x7y1) (and x2y6 x7y1) (and x1y7 x7y1) (and x5y3 x6y2) (and x4y4 x6y2) (and x3y5 x6y2) (and x2y6 x6y2) (and x1y7 x6y2) (and x4y4 x5y3) (and x3y5 x5y3) (and x2y6 x5y3) (and x1y7 x5y3) (and x3y5 x4y4) (and x2y6 x4y4) (and x1y7 x4y4) (and x2y6 x3y5) (and x1y7 x3y5) (and x1y7 x2y6))))
+(assert (not (or (and x6y3 x7y2) (and x5y4 x7y2) (and x4y5 x7y2) (and x3y6 x7y2) (and x2y7 x7y2) (and x5y4 x6y3) (and x4y5 x6y3) (and x3y6 x6y3) (and x2y7 x6y3) (and x4y5 x5y4) (and x3y6 x5y4) (and x2y7 x5y4) (and x3y6 x4y5) (and x2y7 x4y5) (and x2y7 x3y6))))
+(assert (not (or (and x6y4 x7y3) (and x5y5 x7y3) (and x4y6 x7y3) (and x3y7 x7y3) (and x5y5 x6y4) (and x4y6 x6y4) (and x3y7 x6y4) (and x4y6 x5y5) (and x3y7 x5y5) (and x3y7 x4y6))))
+(assert (not (or (and x6y5 x7y4) (and x5y6 x7y4) (and x4y7 x7y4) (and x5y6 x6y5) (and x4y7 x6y5) (and x4y7 x5y6))))
+(assert (not (or (and x6y6 x7y5) (and x5y7 x7y5) (and x5y7 x6y6))))
+(assert (not (or (and x6y7 x7y6))))
+
+; Bottom left from the main diagonal, not including:
+(assert (not (or (and x6y0 x5y1) (and x6y0 x4y2) (and x6y0 x3y3) (and x6y0 x2y4) (and x6y0 x1y5) (and x6y0 x0y6) (and x5y1 x4y1) (and x5y1 x3y2) (and x5y1 x2y3) (and x5y1 x1y4) (and x5y1 x0y5) (and x4y2 x3y1) (and x4y2 x2y2) (and x4y2 x1y3) (and x4y2 x0y4) (and x3y3 x2y1) (and x3y3 x1y2) (and x3y3 x0y3) (and x2y4 x1y1) (and x2y4 x0y2) (and x1y5 x0y1))))
+(assert (not (or (and x5y0 x4y2) (and x5y0 x3y3) (and x5y0 x2y4) (and x5y0 x1y5) (and x5y0 x0y6) (and x4y1 x3y2) (and x4y1 x2y3) (and x4y1 x1y4) (and x4y1 x0y5) (and x3y2 x2y2) (and x3y2 x1y3) (and x3y2 x0y4) (and x2y3 x1y2) (and x2y3 x0y3) (and x1y4 x0y2))))
+(assert (not (or (and x4y0 x3y3) (and x4y0 x2y4) (and x4y0 x1y5) (and x4y0 x0y6) (and x3y1 x2y3) (and x3y1 x1y4) (and x3y1 x0y5) (and x2y2 x1y3) (and x2y2 x0y4) (and x1y3 x0y3))))
+(assert (not (or (and x3y0 x2y4) (and x3y0 x1y5) (and x3y0 x0y6) (and x2y1 x1y4) (and x2y1 x0y5) (and x1y2 x0y4))))
+(assert (not (or (and x2y0 x1y5) (and x2y0 x0y6) (and x1y1 x0y5))))
+(assert (not (or (and x1y0 x0y6))))
+
+; the other direction, but same orientation of the diagonal:
+(assert (not (or (and x5y1 x6y0) (and x4y2 x6y0) (and x3y3 x6y0) (and x2y4 x6y0) (and x1y5 x6y0) (and x0y6 x6y0) (and x4y1 x5y1) (and x3y2 x5y1) (and x2y3 x5y1) (and x1y4 x5y1) (and x0y5 x5y1) (and x3y1 x4y2) (and x2y2 x4y2) (and x1y3 x4y2) (and x0y4 x4y2) (and x2y1 x3y3) (and x1y2 x3y3) (and x0y3 x3y3) (and x1y1 x2y4) (and x0y2 x2y4) (and x0y1 x1y5))))
+(assert (not (or (and x4y2 x5y0) (and x3y3 x5y0) (and x2y4 x5y0) (and x1y5 x5y0) (and x0y6 x5y0) (and x3y2 x4y1) (and x2y3 x4y1) (and x1y4 x4y1) (and x0y5 x4y1) (and x2y2 x3y2) (and x1y3 x3y2) (and x0y4 x3y2) (and x1y2 x2y3) (and x0y3 x2y3) (and x0y2 x1y4))))
+(assert (not (or (and x3y3 x4y0) (and x2y4 x4y0) (and x1y5 x4y0) (and x0y6 x4y0) (and x2y3 x3y1) (and x1y4 x3y1) (and x0y5 x3y1) (and x1y3 x2y2) (and x0y4 x2y2) (and x0y3 x1y3))))
+(assert (not (or (and x2y4 x3y0) (and x1y5 x3y0) (and x0y6 x3y0) (and x1y4 x2y1) (and x0y5 x2y1) (and x0y4 x1y2))))
+(assert (not (or (and x1y5 x2y0) (and x0y6 x2y0) (and x0y5 x1y1))))
+(assert (not (or (and x0y6 x1y0))))
+
+; finally, check if the model is satisfiable and output a model
 (check-sat)
 (get-model)
