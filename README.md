@@ -34,8 +34,15 @@ Note: This is actually the example solution from the specification, depicted abo
 
 #### 8x8 (generated, see 8queensGenerated.smt2)
 
+<img width="603" alt="image" src="https://github.com/heseltime/planning_reasoning/assets/66922223/cee076a1-7329-466e-b167-97b79775c65a">
 
 ### Diagram
 
 <img width="682" alt="image" src="https://github.com/heseltime/planning_reasoning/assets/66922223/9831652c-bbc6-4ee9-ba04-7eadfdfcdb99">
+
+### Further Note
+
+Since the solution for the 8x8 problem is generically generated, it can be applied to even larger scale versions of the N-queens problem, e.g. 16-, 32- and 64-queens:
+
+
 
