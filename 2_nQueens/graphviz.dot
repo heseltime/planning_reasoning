@@ -1,0 +1,17 @@
+strict digraph {
+    g [shape="ellipse" style="filled" fillcolor="#1f77b4" label = "generate.py"]
+    8 [shape="polygon" style="filled" fillcolor="#ff7f0e" label = "8queensGenerated_PROJECT_SOLUTION.smt2"]
+    4 [shape="polygon" style="filled" fillcolor="#ff7f0e" label = "4queensTest.smt2"]
+    16 [shape="polygon" style="filled" fillcolor="#ffa74f" label = "16queensGenerated.smt2"]
+    32 [shape="polygon" style="filled" fillcolor="#ffa74f" label = "32queensGenerated.smt2"]
+    v4 [shape="ellipse" style="filled" fillcolor="#ff7f0e" label = "visualize4queensOutput.py"]
+    v8 [shape="ellipse" style="filled" fillcolor="#ff7f0e" label = "visualize8queensOutput.py"]
+    m [shape="cube" style="filled" fillcolor="green" label = "z3 execution web interface e.g. https://jfmc.github.io/z3-play/"]
+    g -> 8 [fillcolor="#a6cee3" color="#1f78b4"]
+    g -> 16 [fillcolor="#a6cee3" color="#1f78b4"]
+    g -> 32 [fillcolor="#a6cee3" color="#1f78b4"]
+    8 -> m [fillcolor="#a6cee3" color="#1f78b4"]
+    m -> v8 [fillcolor="#a6cee3" color="#1f78b4"]
+    4 -> m [fillcolor="#a6cee3" color="#1f78b4"]
+    m -> v4 [fillcolor="#a6cee3" color="#1f78b4"]
+}
