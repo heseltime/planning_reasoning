@@ -3,26 +3,26 @@
 % see http://fmv.jku.at/limboole for a current (2024-01) web interface to execute
 
  %% init state
-stone_1_A_0 &  stone_2_B_0 &  stone_3_C_0 &  stone_8_D_0 &  stone_7_E_0 &  stone_4_F_0 &  stone_6_G_0 &  stone_5_H_0 &  stone_0_I_0 &  
+stone_1_A_0 &  stone_2_B_0 &  stone_3_C_0 &  stone_4_D_0 &  stone_5_E_0 &  stone_6_F_0 &  stone_7_G_0 &  stone_0_H_0 &  stone_8_I_0 &  
  !stone_1_B_0 &  !stone_1_C_0 &  !stone_1_D_0 &  !stone_1_E_0 &  !stone_1_F_0 &  !stone_1_G_0 &  !stone_1_H_0 &  !stone_1_I_0 &  
  !stone_2_A_0 &  !stone_2_C_0 &  !stone_2_D_0 &  !stone_2_E_0 &  !stone_2_F_0 &  !stone_2_G_0 &  !stone_2_H_0 &  !stone_2_I_0 &  
  !stone_3_A_0 &  !stone_3_B_0 &  !stone_3_D_0 &  !stone_3_E_0 &  !stone_3_F_0 &  !stone_3_G_0 &  !stone_3_H_0 &  !stone_3_I_0 &  
- !stone_4_A_0 &  !stone_4_B_0 &  !stone_4_C_0 &  !stone_4_D_0 &  !stone_4_E_0 &  !stone_4_G_0 &  !stone_4_H_0 &  !stone_4_I_0 &  
- !stone_5_A_0 &  !stone_5_B_0 &  !stone_5_C_0 &  !stone_5_D_0 &  !stone_5_E_0 &  !stone_5_F_0 &  !stone_5_G_0 &  !stone_5_I_0 &  
- !stone_6_A_0 &  !stone_6_B_0 &  !stone_6_C_0 &  !stone_6_D_0 &  !stone_6_E_0 &  !stone_6_F_0 &  !stone_6_H_0 &  !stone_6_I_0 &  
- !stone_7_A_0 &  !stone_7_B_0 &  !stone_7_C_0 &  !stone_7_D_0 &  !stone_7_F_0 &  !stone_7_G_0 &  !stone_7_H_0 &  !stone_7_I_0 &  
- !stone_8_A_0 &  !stone_8_B_0 &  !stone_8_C_0 &  !stone_8_E_0 &  !stone_8_F_0 &  !stone_8_G_0 &  !stone_8_H_0 &  !stone_8_I_0 & 
+ !stone_4_A_0 &  !stone_4_B_0 &  !stone_4_C_0 &  !stone_4_E_0 &  !stone_4_F_0 &  !stone_4_G_0 &  !stone_4_H_0 &  !stone_4_I_0 &  
+ !stone_5_A_0 &  !stone_5_B_0 &  !stone_5_C_0 &  !stone_5_D_0 &  !stone_5_F_0 &  !stone_5_G_0 &  !stone_5_H_0 &  !stone_5_I_0 &  
+ !stone_6_A_0 &  !stone_6_B_0 &  !stone_6_C_0 &  !stone_6_D_0 &  !stone_6_E_0 &  !stone_6_G_0 &  !stone_6_H_0 &  !stone_6_I_0 &  
+ !stone_7_A_0 &  !stone_7_B_0 &  !stone_7_C_0 &  !stone_7_D_0 &  !stone_7_E_0 &  !stone_7_F_0 &  !stone_7_H_0 &  !stone_7_I_0 &  
+ !stone_8_A_0 &  !stone_8_B_0 &  !stone_8_C_0 &  !stone_8_D_0 &  !stone_8_E_0 &  !stone_8_F_0 &  !stone_8_G_0 &  !stone_8_H_0 & 
 
  %% goal state
 stone_1_A_2 &  stone_2_B_2 &  stone_3_C_2 &  stone_4_D_2 &  stone_5_E_2 &  stone_6_F_2 &  stone_7_G_2 &  stone_8_H_2 &  stone_0_I_2 &  
  !stone_1_B_2 &  !stone_1_C_2 &  !stone_1_D_2 &  !stone_1_E_2 &  !stone_1_F_2 &  !stone_1_G_2 &  !stone_1_H_2 &  !stone_1_I_2 &  
  !stone_2_A_2 &  !stone_2_C_2 &  !stone_2_D_2 &  !stone_2_E_2 &  !stone_2_F_2 &  !stone_2_G_2 &  !stone_2_H_2 &  !stone_2_I_2 &  
  !stone_3_A_2 &  !stone_3_B_2 &  !stone_3_D_2 &  !stone_3_E_2 &  !stone_3_F_2 &  !stone_3_G_2 &  !stone_3_H_2 &  !stone_3_I_2 &  
- !stone_4_A_2 &  !stone_4_B_2 &  !stone_4_C_2 &  !stone_4_D_2 &  !stone_4_E_2 &  !stone_4_G_2 &  !stone_4_H_2 &  !stone_4_I_2 &  
- !stone_5_A_2 &  !stone_5_B_2 &  !stone_5_C_2 &  !stone_5_D_2 &  !stone_5_E_2 &  !stone_5_F_2 &  !stone_5_G_2 &  !stone_5_I_2 &  
- !stone_6_A_2 &  !stone_6_B_2 &  !stone_6_C_2 &  !stone_6_D_2 &  !stone_6_E_2 &  !stone_6_F_2 &  !stone_6_H_2 &  !stone_6_I_2 &  
- !stone_7_A_2 &  !stone_7_B_2 &  !stone_7_C_2 &  !stone_7_D_2 &  !stone_7_F_2 &  !stone_7_G_2 &  !stone_7_H_2 &  !stone_7_I_2 &  
- !stone_8_A_2 &  !stone_8_B_2 &  !stone_8_C_2 &  !stone_8_E_2 &  !stone_8_F_2 &  !stone_8_G_2 &  !stone_8_H_2 &  !stone_8_I_2 & 
+ !stone_4_A_2 &  !stone_4_B_2 &  !stone_4_C_2 &  !stone_4_E_2 &  !stone_4_F_2 &  !stone_4_G_2 &  !stone_4_H_2 &  !stone_4_I_2 &  
+ !stone_5_A_2 &  !stone_5_B_2 &  !stone_5_C_2 &  !stone_5_D_2 &  !stone_5_F_2 &  !stone_5_G_2 &  !stone_5_H_2 &  !stone_5_I_2 &  
+ !stone_6_A_2 &  !stone_6_B_2 &  !stone_6_C_2 &  !stone_6_D_2 &  !stone_6_E_2 &  !stone_6_G_2 &  !stone_6_H_2 &  !stone_6_I_2 &  
+ !stone_7_A_2 &  !stone_7_B_2 &  !stone_7_C_2 &  !stone_7_D_2 &  !stone_7_E_2 &  !stone_7_F_2 &  !stone_7_H_2 &  !stone_7_I_2 &  
+ !stone_8_A_2 &  !stone_8_B_2 &  !stone_8_C_2 &  !stone_8_D_2 &  !stone_8_E_2 &  !stone_8_F_2 &  !stone_8_G_2 &  !stone_8_H_2 & 
  %% actions
 
 
